@@ -1,12 +1,9 @@
 def prime?(num)
+  #prime numbers are only divisible by 1 and themselves
+  #prime numbers are not divisible by any number from 2 to the number itself
   two_to_num = 2..(num-1)
-  two_to_num.each do |x|
-    if num % x == 0
-      return false
-    else
-      return true
-    end
-  end
+  two_to_num.each { |x| return false if num % x == 0 }
+  true
 end
 
 
